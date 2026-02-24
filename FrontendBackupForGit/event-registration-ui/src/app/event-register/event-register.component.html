@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Register for Event</h2>
+
+  <form (ngSubmit)="registerParticipant()">
+    <div>
+      <label>Event Id:</label><br />
+      <input type="number" [(ngModel)]="eventId" name="eventId" required />
+    </div>
+
+    <div>
+      <label>Name:</label><br />
+      <input type="text" [(ngModel)]="name" name="name" required />
+    </div>
+
+    <div>
+      <label>Email:</label><br />
+      <input type="email" [(ngModel)]="email" name="email" required />
+    </div>
+
+    <br />
+
+    <button type="submit">Register</button>
+  </form>
+
+  <p *ngIf="message">{{ message }}</p>
+</div>

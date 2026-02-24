@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Events List</h2>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Max Seats</th>
+      <th>Available Seats</th>
+    </tr>
+
+    <tr *ngFor="let ev of events">
+      <td>{{ev.id}}</td>
+      <td>{{ev.title}}</td>
+      <td>{{ev.eventDate | date}}</td>
+      <td>{{ev.maxSeats}}</td>
+      <td>{{ev.maxSeats - ev.participants.length}}</td>
+    </tr>
+  </table>
+</div>
